@@ -10,7 +10,7 @@ const useAxios = (): AxiosInstance => {
   const dispatch = useDispatch();
   const axiosInstance = useMemo(() => {
     const instance = axios.create({
-      baseURL: 'https://hospital-food-management-system-qs9c.onrender.com/',
+      baseURL: 'https://hospital-food-management-system-qs9c.onrender.com/api',
       headers: {
         'Content-Type': 'application/json',
       },
