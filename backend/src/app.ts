@@ -30,7 +30,7 @@ app.use(cookieParser())
 
 // Configure CORS
 app.use(cors({
-  origin: ['https://hospital-food-management-system.vercel.app', 'http://localhost:5173'],
+  origin: 'https://hospital-food-management-system.vercel.app',
   methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'], 
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true 
