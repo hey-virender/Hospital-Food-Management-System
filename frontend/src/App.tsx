@@ -10,7 +10,7 @@ import Profile from "./components/auth/Profile";
 import { Alert } from "@mui/material";
 
 const App = () => {
-  const { user, isAuthenticated } = useSelector((state: any) => state.auth);
+  const { user } = useSelector((state: any) => state.auth);
   const { error, message } = useSelector((state: any) => state.ui);
 
   return (
