@@ -3,23 +3,24 @@ import { createMealPlan, getMealPlans,  updateMealPlan, deleteMealPlan, getMealP
 import { authMiddleware } from '../middlewares/authMiddleware';
 
 const router = Router();
+router.use(authMiddleware)
 
 // Create a new meal plan
 
-router.post('/meal-plan', authMiddleware, createMealPlan);
+router.post('/meal-plan', createMealPlan);
 
 // Get all meal plans
-router.get('/meal-plan', authMiddleware, getMealPlans);
+router.get('/meal-plan',  getMealPlans);
 
 // Get a single meal plan by patient ID
 
 // Get a single meal plan by ID
-router.get('/meal-plan/:id', authMiddleware, getMealPlansByPatientId);
+router.get('/meal-plan/:id', getMealPlansByPatientId);
 
 // Update a meal plan by ID
-router.put('/meal-plan/:id', authMiddleware, updateMealPlan);
+router.put('/meal-plan/:id', updateMealPlan);
 
 // Delete a meal plan by ID
-router.delete('/meal-plan/:id', authMiddleware, deleteMealPlan);
+router.delete('/meal-plan/:id',  deleteMealPlan);
 
 export default router;
