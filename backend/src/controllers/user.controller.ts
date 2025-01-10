@@ -56,7 +56,7 @@ export const login = async (req: Request, res: Response): Promise<any> => {
     const token = generateToken(user._id.toString(), user.role);
 
     // Send the token in a cookie
-    res.cookie('auth_token', token, { httpOnly: true, secure: true, sameSite: 'strict' });
+    res.cookie('auth_token', token, { httpOnly: true, secure: true, sameSite: 'none' });
 
     // Send user details excluding the password
     const { password: _, ...userDetails } = user.toObject(); // Exclude password
