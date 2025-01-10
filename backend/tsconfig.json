@@ -2,10 +2,14 @@
   {
     "compilerOptions": {
       "typeRoots": ["./src/types","./node_modules/@types",],
-      "strict": true,
       "target": "es6",
       "module": "commonjs",
-      "esModuleInterop": true
+      "outDir": "./dist",      
+      "rootDir": "./src",   
+      "esModuleInterop": true,
+      "skipLibCheck": true,         
+      "forceConsistentCasingInFileNames": true
+    
     }
   
   ,
