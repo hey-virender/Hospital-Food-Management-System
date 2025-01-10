@@ -4,13 +4,13 @@ import { useDispatch } from 'react-redux';
 import { logout } from '../store/slices/authSlice';
 
 
-const baseUrl = import.meta.env.VITE_BASE_URL
+
 
 const useAxios = (): AxiosInstance => {
   const dispatch = useDispatch();
   const axiosInstance = useMemo(() => {
     const instance = axios.create({
-      baseURL: baseUrl,
+      baseURL: 'http://localhost:3000/api',
       headers: {
         'Content-Type': 'application/json',
       },

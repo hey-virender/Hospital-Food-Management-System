@@ -30,10 +30,10 @@ app.use(cookieParser())
 
 // Configure CORS
 app.use(cors({
-  origin: 'https://hospital-food-management-system.vercel.app',
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  allowedHeaders: 'Content-Type,Authorization',
-  credentials:true
+  origin: ['https://hospital-food-management-system.vercel.app', 'http://localhost:5173'],
+  methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'], 
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true 
 }));
 
 app.use("/api", userRoutes);
@@ -46,4 +46,5 @@ app.use("/api",analyticsRoutes)
 // Start the server
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
+  console.log(process.env.JWT_SECRET)
 });

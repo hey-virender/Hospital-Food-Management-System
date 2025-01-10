@@ -26,6 +26,7 @@ const PatientList: React.FC = () => {
     const fetchPatients = async () => {
       try {
         const response = await axios.get("/patients");
+        console.log("response",response.data)
         dispatch(setPatients(response.data));
       } catch (error:any) {
         dispatch(setErrorWithTimeout(error.response.data.message))

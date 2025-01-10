@@ -7,6 +7,7 @@ export const authMiddleware = (req: Request, res: Response, next: NextFunction):
   try {
     // Extract token from headers or cookies
     const token = req.cookies.auth_token || req.headers.authorization?.split(' ')[1];
+    console.log("token",token)
     if (!token) {
       res.status(401).json({ message: 'Authentication token is missing' });
       return; // Ensure function ends execution
