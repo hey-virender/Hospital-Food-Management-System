@@ -83,7 +83,7 @@ const Analytics: React.FC = () => {
   // Data for the Line Chart (Meals Served Over Days)
   const mealsServedData = {
     labels: analyticsData?.mealsServedPerDay?.length
-      ? analyticsData.mealsServedPerDay.map((day: any, index: number) => `Day ${index + 1}`)
+      ? analyticsData.mealsServedPerDay.map((index: number) => `Day ${index + 1}`)
       : [],
     datasets: [
       {
