@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import AuthWrapper from "./components/auth/AuthWrapper";
-import Home from "./components/Home";
-import { useDispatch, useSelector } from "react-redux";
+
+import { useSelector } from "react-redux";
 import Dashboard from "./components/dashboard/Dashboard";
 import StaffDashboard from "./components/dashboard/StaffDashboard";
 import PatientDetails from "./components/patients/PatientDetails";
